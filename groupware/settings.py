@@ -42,7 +42,15 @@ INSTALLED_APPS = [
     'users',
     'tinymce',
     'fontawesomefree',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
