@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'main',
     'users',
     'tinymce',
-    'fontawesomefree'
+    'fontawesomefree',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
