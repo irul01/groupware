@@ -1,4 +1,4 @@
 /venvGroupware
 db.sqlite3
-.*/__pycache__
-.*/migrations/[0-9]{4}_*.py
+**/__pycache__
+/migrations/[0-9]*.py
