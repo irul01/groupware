@@ -4,7 +4,7 @@ from django.contrib import messages
 from .forms import UserRegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-
+from .forms import UserUpdateForm
 
 # Create your views here.
 def register(request):
@@ -65,3 +65,14 @@ def custom_login(request):
         template_name="users/login.html",
         context={"form": form}
         )
+
+def profile(request, username):
+    if request.method == 'POST':
+        pass
+
+    user = get_user_model().objects.filter(username=username).first()
+    if user:
+        form = UserUpdateForm(instance=user)
+        return render(request, 'users/profile.html', context={'form': form})
+
+    return redirect("homepage")

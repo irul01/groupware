@@ -1,3 +1,4 @@
+<!-- django_project/main/templates/main/article.html -->
 {% extends "main/header.html" %}
 {% block content %}
 <div class="row media content-section mobiledevice">
@@ -6,6 +7,12 @@
             <div>
                 <h1 class="title-style">{{ object.title }}</h1>
                 <h2 class="subtitle-style">{{ object.subtitle }}</h2>
+            </div>
+        </div>
+        <div class="d-flex article-metadata">
+            <div>
+                <a class="mr-2" href="{% url 'profile' object.author %}">{{ object.author }}</a><br>
+                <small class="text-muted">Published {{ object.published|date:"F d, Y" }}</small>
             </div>
         </div>
     </div>
